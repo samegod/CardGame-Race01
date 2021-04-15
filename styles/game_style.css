@@ -1,0 +1,257 @@
+html{
+    background: url(../assets/back.png) no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+
+.cards{
+    position: relative;
+    display:flex;
+    flex-flow:row;
+}
+
+.card{
+    width: 180px;
+    height: 230px;
+    background: antiquewhite;    
+    border-radius: 10px;
+    margin: 5px 15px;
+    min-width: 180px;
+}
+
+.card_img{
+    height: 120px;    
+    margin: auto 0;
+    position: relative;
+    bottom: 30px;
+}
+
+.name{
+    margin-bottom: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.card_img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.mana{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    position: relative;
+    left: -10px;
+    bottom: 10px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    clip-path: polygon(52% 0, 90% 20%, 100% 60%, 74% 96%, 25% 100%, 0% 60%, 18% 13%);
+}
+
+.attack{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    position: relative;
+    right: 10px;
+    width: 50px;
+    bottom: 10px;
+    height: 50px;
+    background-color: rgb(220, 173, 55);
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hp{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    position: relative;
+    bottom: 10px;
+    left: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(247, 77, 77);
+    object-fit: cover;
+    clip-path: polygon(53% 0, 35% 20%, 26% 35%, 21% 53%, 20% 74%, 25% 90%, 35% 96%, 51% 100%, 65% 97%, 73% 94%, 82% 86%, 85% 74%, 85% 58%, 83% 45%, 76% 31%, 69% 19%);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr;
+    gap: 20px 0px;
+    
+    grid-template-areas:
+      "enemy . . . . . timer"
+      ". . enemy_cards enemy_cards enemy_cards . ."
+      ". . . . . . next"
+      ". . cards cards cards . ."
+      ". . . . . . user";
+  }
+
+.b_next{
+    grid-area: next;
+    position: relative;
+    text-align: right;
+}
+
+.timer{
+    grid-area: timer;
+    text-align: right;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(76, 0, 255);
+}
+
+.next{
+  
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    border-radius: 20px;
+    border:none;
+    background-color: rgb(201, 201, 201);
+    font-size: 2vh;
+}
+
+
+.hand_cards { 
+    grid-area: hand_cards;
+    display:flex;
+    flex-flow:row;
+    justify-content: center;
+ }
+
+.user { 
+    display:flex;
+    flex-flow:row;
+    grid-area: user;
+    justify-content:flex-end;
+
+}
+  .enemy { 
+    display:flex;
+    flex-flow:row;
+    grid-area: enemy;
+
+
+}
+  .enemy_hand_cards { 
+    display:flex;
+    flex-flow:row;
+    grid-area: enemy_hand_cards;
+    justify-content: center;
+}
+  .enemy_cards { 
+    display:flex;
+    flex-flow:row;
+    grid-area: enemy_cards;
+    justify-content: center;
+}
+
+.cards {
+    display:flex;
+    flex-flow:row;
+    grid-area: cards; 
+    justify-content: center;
+}
+#socket-info{
+    display:none;
+}
+.user .card{
+    position: absolute;
+    right: 0px;
+    bottom: 40px;
+}
+
+.user_card{
+    width: 180px;
+    height: 230px;
+    margin: 5px 15px;
+    max-width: 180px;
+    max-height: 230px;
+    justify-content:flex-end;
+}
+
+.user_img img{
+    position: relative;
+    bottom: 30px;
+    width:120px;
+    height: 180px;
+    border-radius: 50%;
+    border: 15px solid black; /* Параметры рамки */
+    margin: 0;
+    padding: 0;
+}
+
+
+.user_hp{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    position: relative;
+    bottom: 110px;
+    width: 70px;
+    height: 70px;
+    left: -20px;
+
+    background-color: rgb(247, 77, 77);
+    object-fit: cover;
+    clip-path: polygon(53% 0, 35% 20%, 26% 35%, 21% 53%, 20% 74%, 25% 90%, 35% 96%, 51% 100%, 65% 97%, 73% 94%, 82% 86%, 85% 74%, 85% 58%, 83% 45%, 76% 31%, 69% 19%);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.user_mana{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    position: relative;
+    left: -10px;
+
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(0, 216, 216);
+    clip-path: polygon(52% 0, 90% 20%, 100% 60%, 74% 96%, 25% 100%, 0% 60%, 18% 13%);
+}
+
+.user_name{
+    margin-bottom: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+    left: -10px;
+    padding: 0;
+    margin: 0;
+}
+
+.choise {
+	border: 2px dashed #000;
+}
+.fear {
+	border: 5px dashed rgb(131, 78, 78);
+}

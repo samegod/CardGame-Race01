@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+  }
+
+
+.bg-image {
+    /* The image used */
+    background-image: url("../assets/poster.jpeg");
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#socket-info{
+    display:none;
+}
+.game{
+    
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 30%;
+        height: 20%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+  
+}
+
+.login{
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    border:none;
+    text-align: center;
+    position: relative;
+}
+.go_game{
+    position: relative;
+    width: 50%;
+    font-size: 2.5vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100%;
+    border-radius: 10px;
+    border:none;
+    margin-top: 15px;
+   outline: none;
+    margin-bottom: 10px;
+}
+
+
+.go_game:active{
+    border:none;
+    background-color: rgb(172, 172, 172);
+}
+
+p{
+    text-align: center;
+    color:white;
+    font-size:26px;
+}
+.battle{
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    text-align: center;
+    height:5vh;
+    font-size: 2.5vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    outline: none;
+
+}
+
+.battle:active{
+    border:none;
+    background-color: rgb(172, 172, 172);
+}
